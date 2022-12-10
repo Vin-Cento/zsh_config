@@ -4,3 +4,6 @@
 [submodule "plugins/zsh-autocomplete"]
 	path = plugins/zsh-autocomplete
 	url = https://github.com/marlonrichert/zsh-autocomplete.git
+[submodule "plugins/bash-my-aws"]
+	path = plugins/bash-my-aws
+	url = https://github.com/bash-my-aws/bash-my-aws.git
