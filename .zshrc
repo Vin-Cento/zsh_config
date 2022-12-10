@@ -34,15 +34,13 @@ complete -C '/usr/bin/aws_completer' aws
 # cd with just Filename
 setopt autocd
 
-ZSHPLUG=$HOME/.config/zsh/plugins/
-
-source $ZSHPLUG/bash-my-aws/aliases
-source $ZSHPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSHPLUG/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZSHPLUG/zsh-colored-man-pages/zsh-colored-man-pages.zsh
-source $ZSHPLUG/aws_zsh_completer.zsh
-source $ZSHPLUG/wp-completion.bash
-source $ZSHPLUG/lfcd.sh
+source $ZDOTDIR/bash-my-aws/aliases
+source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZDOTDIR/zsh-colored-man-pages/zsh-colored-man-pages.zsh
+source $ZDOTDIR/aws_zsh_completer.zsh
+source $ZDOTDIR/wp-completion.bash
+source $ZDOTDIR/lfcd.sh
 
 # vi mode
 bindkey -v
@@ -111,8 +109,8 @@ SPACESHIP_DIR_TRUNC=3
 
 
 # fzf setup
-source $ZDOTDIR/plugins/fzf/completion.zsh
-source $ZDOTDIR/plugins/fzf/key-bindings.zsh
+source $ZDOTDIR/fzf/completion.zsh
+source $ZDOTDIR/fzf/key-bindings.zsh
 
 ### Personal list of alias ###
 
@@ -166,9 +164,9 @@ alias re='ffmpeg -f x11grab -s 2160x1350 -i :0.0 -f alsa -i hw:0'
 # alias re='ffmpeg -f x11grab -s 1980x1080 -probesize 42M -i :0.0 -f pulse -ac 2 -i 7'
 
 
-eval "$(lua ~/.config/zsh/plugins/z.lua/z.lua --init zsh)"
+eval "$(lua ~/.config/zsh/z.lua/z.lua --init zsh)"
 #ecompar
-eval "$(lua ~/.config/zsh/plugins/z.lua/z.lua --init bash enhanced once)"
+eval "$(lua ~/.config/zsh/z.lua/z.lua --init bash enhanced once)"
 _SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS" && unset _JAVA_OPTIONS && alias java='java "$_SILENT_JAVA_OPTIONS"'
 
 # uncomment when using node

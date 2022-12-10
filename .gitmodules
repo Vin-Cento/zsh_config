@@ -7,3 +7,6 @@
 [submodule "plugins/bash-my-aws"]
 	path = plugins/bash-my-aws
 	url = https://github.com/bash-my-aws/bash-my-aws.git
+[submodule "bash-my-aws"]
+	path = bash-my-aws
+	url = https://github.com/bash-my-aws/bash-my-aws.git
