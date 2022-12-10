@@ -39,8 +39,8 @@ source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-colored-man-pages/zsh-colored-man-pages.zsh
 source $ZDOTDIR/aws_zsh_completer.zsh
-source $ZDOTDIR/wp-completion.bash
 source $ZDOTDIR/lfcd.sh
+# source $ZDOTDIR/wp-completion.bash
 
 # vi mode
 bindkey -v
@@ -164,9 +164,9 @@ alias re='ffmpeg -f x11grab -s 2160x1350 -i :0.0 -f alsa -i hw:0'
 # alias re='ffmpeg -f x11grab -s 1980x1080 -probesize 42M -i :0.0 -f pulse -ac 2 -i 7'
 
 
-eval "$(lua ~/.config/zsh/z.lua/z.lua --init zsh)"
+# eval "$(lua ~/.config/zsh/z.lua/z.lua --init zsh)"
 #ecompar
-eval "$(lua ~/.config/zsh/z.lua/z.lua --init bash enhanced once)"
+eval "$(lua ~/.config/zsh/z.lua/z.lua --init zsh enhanced once)"
 _SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS" && unset _JAVA_OPTIONS && alias java='java "$_SILENT_JAVA_OPTIONS"'
 
 # uncomment when using node

@@ -10,3 +10,6 @@
 [submodule "bash-my-aws"]
 	path = bash-my-aws
 	url = https://github.com/bash-my-aws/bash-my-aws.git
+[submodule "z.lua"]
+	path = z.lua
+	url = https://github.com/skywind3000/z.lua.git
