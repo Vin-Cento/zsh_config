@@ -22,7 +22,6 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_DATA_HOME/zsh/.zcompcache"
 zstyle ':completion:*' menu select
-# zstyle ':completion:*' file-list all
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zmodload zsh/complist
@@ -35,7 +34,6 @@ complete -C '/usr/bin/aws_completer' aws
 # cd with just Filename
 setopt autocd
 
-# ZSHPLUG=/usr/share/zsh/plugins
 ZSHPLUG=$HOME/.config/zsh/plugins/
 
 source $ZSHPLUG/bash-my-aws/aliases
@@ -43,9 +41,8 @@ source $ZSHPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSHPLUG/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSHPLUG/zsh-colored-man-pages/zsh-colored-man-pages.zsh
 source $ZSHPLUG/aws_zsh_completer.zsh
-# source $ZSHPLUG/cd_ls.zsh
-source $ZDOTDIR/plugins/wp-completion.bash
-source $ZDOTDIR/plugins/lfcd.sh
+source $ZSHPLUG/wp-completion.bash
+source $ZSHPLUG/lfcd.sh
 
 # vi mode
 bindkey -v
@@ -75,6 +72,9 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 ### SpaceShip settings ###
+
+# using spaceship
+source $ZDOTDIR/spaceship-prompt/spaceship.zsh
 
 # settings
 SPACESHIP_AWS_SHOW=true
@@ -109,8 +109,6 @@ SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_JOBS_SHOW=true
 SPACESHIP_DIR_TRUNC=3
 
-# using spaceship
-source $ZDOTDIR/spaceship/spaceship.zsh
 
 # fzf setup
 source $ZDOTDIR/plugins/fzf/completion.zsh

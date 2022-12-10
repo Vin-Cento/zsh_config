@@ -1,0 +1,6 @@
+[submodule "spaceship-prompt"]
+	path = spaceship-prompt
+	url = https://github.com/spaceship-prompt/spaceship-prompt.git
+[submodule "plugins/zsh-autocomplete"]
+	path = plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
